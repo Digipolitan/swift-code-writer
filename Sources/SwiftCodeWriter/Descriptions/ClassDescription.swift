@@ -13,8 +13,8 @@ public struct ClassDescription {
         public let visibility: Visibility
         public let isReferenceType: Bool
 
-        public init(visiblity: Visibility = .public, isReferenceType: Bool = true) {
-            self.visibility = visiblity
+        public init(visibility: Visibility = .default, isReferenceType: Bool = true) {
+            self.visibility = visibility
             self.isReferenceType = isReferenceType
         }
     }
@@ -28,6 +28,7 @@ public struct ClassDescription {
     public var methods: [MethodDescription]
     public var properties: [PropertyDescription]
     public var nestedClasses: [ClassDescription]
+    public var attributes: [String]
     public let documentation: String?
 
     public init(name: String, options: Options = Options(), parent: String? = nil, modules: [String] = [], documentation: String? = nil) {
@@ -41,6 +42,7 @@ public struct ClassDescription {
         self.methods = []
         self.properties = []
         self.nestedClasses = []
+        self.attributes = []
     }
 
     public func moduleDependencies() -> [String] {

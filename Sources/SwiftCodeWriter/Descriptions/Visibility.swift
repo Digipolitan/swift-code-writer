@@ -8,6 +8,7 @@
 import Foundation
 
 public enum Visibility: String {
+    case `default` = ""
     case open = "open"
     case `public` = "public"
     case `private` = "private"

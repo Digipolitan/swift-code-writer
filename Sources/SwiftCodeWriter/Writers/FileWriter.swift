@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public class FileWriter: CodeWriter {
+public struct FileWriter: CodeWriter {
 
     public typealias Description = FileDescription
 
@@ -21,7 +21,7 @@ public class FileWriter: CodeWriter {
         var parts: [String] = []
 
         if let documentation = description.documentation {
-            parts.append(DocumentationSingleLineWriter.default.write(documentation: documentation))
+            parts.append(DocumentationWriter.MultiLine.default.write(documentation: documentation, mode: .slashes))
         }
 
         parts.append(contentsOf: description.moduleDependencies().map({ "import \($0)" }))

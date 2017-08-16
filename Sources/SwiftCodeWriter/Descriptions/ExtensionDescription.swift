@@ -12,7 +12,7 @@ public struct ExtensionDescription {
     public struct Options {
         public let visibility: Visibility
 
-        public init(visiblity: Visibility = .public) {
+        public init(visiblity: Visibility = .default) {
             self.visibility = visiblity
         }
     }

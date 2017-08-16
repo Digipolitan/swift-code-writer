@@ -11,14 +11,20 @@ import CodeWriter
 public struct PropertyDescription {
 
     public struct Options {
-        public let visibility: Visibility
+        public let getVisibility: Visibility
+        public let setVisibility: Visibility?
         public let isLazy: Bool
         public let isStatic: Bool
+        public let isConstant: Bool
+        public let isWeak: Bool
 
-        public init(visibility: Visibility = .public, isLazy: Bool = false, isStatic: Bool = false) {
-            self.visibility = visibility
+        public init(getVisibility: Visibility = .default, setVisibility: Visibility? = nil, isLazy: Bool = false, isStatic: Bool = false, isConstant: Bool = false, isWeak: Bool = false) {
+            self.getVisibility = getVisibility
+            self.setVisibility = setVisibility
             self.isLazy = isLazy
             self.isStatic = isStatic
+            self.isConstant = isConstant
+            self.isWeak = isWeak
         }
     }
 
@@ -33,16 +39,22 @@ public struct PropertyDescription {
     }
 
     public let name: String
+    public let type: String?
     public let options: Options
     public let module: String?
-    public let value: String?
+    public let value: CodeBuilder?
+    public let attributes: [String]?
     public let compute: ComputeDescription?
+    public let documentation: String?
 
-    public init(name: String, options: Options = Options(), value: String? = nil, module: String? = nil, compute: ComputeDescription? = nil) {
+    public init(name: String, options: Options = Options(), type: String? = nil, value: CodeBuilder? = nil, module: String? = nil, attributes: [String]? = nil, compute: ComputeDescription? = nil, documentation: String? = nil) {
         self.name = name
         self.options = options
+        self.type = type
         self.module = module
         self.value = value
+        self.attributes = attributes
         self.compute = compute
+        self.documentation = documentation
     }
 }

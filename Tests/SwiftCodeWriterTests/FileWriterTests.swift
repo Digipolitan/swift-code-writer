@@ -1,7 +1,7 @@
 import XCTest
 @testable import SwiftCodeWriter
 
-class SwiftFileWriterTests: XCTestCase {
+class FileWriterTests: XCTestCase {
 
     func testWriteEmptyFile() {
         let fileDescription = FileDescription()

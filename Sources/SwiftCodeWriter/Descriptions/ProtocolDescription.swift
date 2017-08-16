@@ -12,7 +12,7 @@ public struct ProtocolDescription {
     public struct Options {
         public let visibility: Visibility
 
-        public init(visiblity: Visibility = .public) {
+        public init(visiblity: Visibility = .default) {
             self.visibility = visiblity
         }
     }
@@ -24,6 +24,7 @@ public struct ProtocolDescription {
     public var initializers: [InitializerDescription]
     public var methods: [MethodDescription]
     public var properties: [PropertyDescription]
+    public var attributes: [String]
     public let documentation: String?
 
     public init(name: String, options: Options = Options(), modules: [String] = [], documentation: String? = nil) {
@@ -35,6 +36,7 @@ public struct ProtocolDescription {
         self.initializers = []
         self.methods = []
         self.properties = []
+        self.attributes = []
     }
 
     public func moduleDependencies() -> [String] {

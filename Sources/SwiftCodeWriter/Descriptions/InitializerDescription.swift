@@ -16,29 +16,31 @@ public struct InitializerDescription {
         public let isConvenience: Bool
         public let isOptional: Bool
         public let isRequired: Bool
+        public let throwsException: Bool
 
-        public init(visibility: Visibility = .public, isOverride: Bool = false, isConvenience: Bool = false, isOptional: Bool = false, isRequired: Bool = false) {
+        public init(visibility: Visibility = .default, isOverride: Bool = false, isConvenience: Bool = false, isOptional: Bool = false, isRequired: Bool = false, throwsException: Bool = false) {
             self.visibility = visibility
             self.isOverride = isOverride
             self.isConvenience = isConvenience
             self.isOptional = isOptional
             self.isRequired = isRequired
+            self.throwsException = throwsException
         }
     }
 
-    public let code: CodeBuilder
+    public let code: CodeBuilder?
     public let options: Options
     public let modules: [String]
     public let arguments: [String]?
-    public let annotations: [String]?
+    public let attributes: [String]?
     public let documentation: String?
 
-    public init(code: CodeBuilder, options: Options = Options(), modules: [String] = [], arguments: [String]? = nil, annotations: [String]? = nil, documentation: String? = nil) {
+    public init(code: CodeBuilder? = nil, options: Options = Options(), modules: [String] = [], arguments: [String]? = nil, attributes: [String]? = nil, documentation: String? = nil) {
         self.code = code
         self.options = options
         self.modules = modules
         self.arguments = arguments
-        self.annotations = annotations
+        self.attributes = attributes
         self.documentation = documentation
     }
 }
