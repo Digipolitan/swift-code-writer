@@ -1,0 +1,614 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		"SwiftCodeWriter::SwiftCodeWriterPackageTests::ProductTarget" /* SwiftCodeWriterPackageTests */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = OBJ_78 /* Build configuration list for PBXAggregateTarget "SwiftCodeWriterPackageTests" */;
+			buildPhases = (
+			);
+			dependencies = (
+				OBJ_81 /* PBXTargetDependency */,
+			);
+			name = SwiftCodeWriterPackageTests;
+			productName = SwiftCodeWriterPackageTests;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		OBJ_42 /* SwiftClassWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_25 /* SwiftClassWriterTests.swift */; };
+		OBJ_43 /* SwiftFileWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* SwiftFileWriterTests.swift */; };
+		OBJ_45 /* SwiftCodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */; };
+		OBJ_46 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
+		OBJ_55 /* ClassDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_10 /* ClassDescription.swift */; };
+		OBJ_56 /* ExtensionDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* ExtensionDescription.swift */; };
+		OBJ_57 /* FileDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* FileDescription.swift */; };
+		OBJ_58 /* InitializerDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* InitializerDescription.swift */; };
+		OBJ_59 /* MethodDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* MethodDescription.swift */; };
+		OBJ_60 /* PropertyDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* PropertyDescription.swift */; };
+		OBJ_61 /* ProtocolDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* ProtocolDescription.swift */; };
+		OBJ_62 /* Visibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* Visibility.swift */; };
+		OBJ_63 /* ClassWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ClassWriter.swift */; };
+		OBJ_64 /* DocumentationMultiLineWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* DocumentationMultiLineWriter.swift */; };
+		OBJ_65 /* FileWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* FileWriter.swift */; };
+		OBJ_66 /* PropertyWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* PropertyWriter.swift */; };
+		OBJ_68 /* CodeWriter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */; };
+		OBJ_74 /* CodeBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* CodeBuilder.swift */; };
+		OBJ_75 /* CodeWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_32 /* CodeWriter.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A3E0F7551F4446BC00E4CD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CodeWriter::CodeWriter";
+			remoteInfo = CodeWriter;
+		};
+		A3E0F7561F4446BC00E4CD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
+			remoteInfo = SwiftCodeWriter;
+		};
+		A3E0F7571F4446BC00E4CD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "CodeWriter::CodeWriter";
+			remoteInfo = CodeWriter;
+		};
+		A3E0F7581F4446BC00E4CD58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriterTests";
+			remoteInfo = SwiftCodeWriterTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_10 /* ClassDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassDescription.swift; sourceTree = "<group>"; };
+		OBJ_11 /* ExtensionDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDescription.swift; sourceTree = "<group>"; };
+		OBJ_12 /* FileDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileDescription.swift; sourceTree = "<group>"; };
+		OBJ_13 /* InitializerDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerDescription.swift; sourceTree = "<group>"; };
+		OBJ_14 /* MethodDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodDescription.swift; sourceTree = "<group>"; };
+		OBJ_15 /* PropertyDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyDescription.swift; sourceTree = "<group>"; };
+		OBJ_16 /* ProtocolDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolDescription.swift; sourceTree = "<group>"; };
+		OBJ_17 /* Visibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visibility.swift; sourceTree = "<group>"; };
+		OBJ_19 /* ClassWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassWriter.swift; sourceTree = "<group>"; };
+		OBJ_20 /* DocumentationMultiLineWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentationMultiLineWriter.swift; sourceTree = "<group>"; };
+		OBJ_21 /* FileWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileWriter.swift; sourceTree = "<group>"; };
+		OBJ_22 /* PropertyWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyWriter.swift; sourceTree = "<group>"; };
+		OBJ_25 /* SwiftClassWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftClassWriterTests.swift; sourceTree = "<group>"; };
+		OBJ_26 /* SwiftFileWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftFileWriterTests.swift; sourceTree = "<group>"; };
+		OBJ_27 /* DerivedData */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DerivedData; sourceTree = SOURCE_ROOT; };
+		OBJ_31 /* CodeBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeBuilder.swift; sourceTree = "<group>"; };
+		OBJ_32 /* CodeWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeWriter.swift; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftCodeWriter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"SwiftCodeWriter::SwiftCodeWriterTests::Product" /* SwiftCodeWriterTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = SwiftCodeWriterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_44 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_45 /* SwiftCodeWriter.framework in Frameworks */,
+				OBJ_46 /* CodeWriter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_68 /* CodeWriter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_76 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		OBJ_18 /* Writers */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_19 /* ClassWriter.swift */,
+				OBJ_20 /* DocumentationMultiLineWriter.swift */,
+				OBJ_21 /* FileWriter.swift */,
+				OBJ_22 /* PropertyWriter.swift */,
+			);
+			path = Writers;
+			sourceTree = "<group>";
+		};
+		OBJ_23 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_24 /* SwiftCodeWriterTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_24 /* SwiftCodeWriterTests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_25 /* SwiftClassWriterTests.swift */,
+				OBJ_26 /* SwiftFileWriterTests.swift */,
+			);
+			name = SwiftCodeWriterTests;
+			path = Tests/SwiftCodeWriterTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_28 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_29 /* CodeWriter */,
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
+		OBJ_29 /* CodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_30 /* CodeWriter */,
+			);
+			name = CodeWriter;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_30 /* CodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_31 /* CodeBuilder.swift */,
+				OBJ_32 /* CodeWriter.swift */,
+			);
+			name = CodeWriter;
+			path = ".build/checkouts/code-writer-swift.git-7489791545997514195/Sources/CodeWriter";
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_33 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"SwiftCodeWriter::SwiftCodeWriterTests::Product" /* SwiftCodeWriterTests.xctest */,
+				"SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */,
+				"CodeWriter::CodeWriter::Product" /* CodeWriter.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_5 /*  */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				OBJ_7 /* Sources */,
+				OBJ_23 /* Tests */,
+				OBJ_27 /* DerivedData */,
+				OBJ_28 /* Dependencies */,
+				OBJ_33 /* Products */,
+			);
+			name = "";
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* SwiftCodeWriter */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* SwiftCodeWriter */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_9 /* Descriptions */,
+				OBJ_18 /* Writers */,
+			);
+			name = SwiftCodeWriter;
+			path = Sources/SwiftCodeWriter;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_9 /* Descriptions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_10 /* ClassDescription.swift */,
+				OBJ_11 /* ExtensionDescription.swift */,
+				OBJ_12 /* FileDescription.swift */,
+				OBJ_13 /* InitializerDescription.swift */,
+				OBJ_14 /* MethodDescription.swift */,
+				OBJ_15 /* PropertyDescription.swift */,
+				OBJ_16 /* ProtocolDescription.swift */,
+				OBJ_17 /* Visibility.swift */,
+			);
+			path = Descriptions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"CodeWriter::CodeWriter" /* CodeWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_70 /* Build configuration list for PBXNativeTarget "CodeWriter" */;
+			buildPhases = (
+				OBJ_73 /* Sources */,
+				OBJ_76 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CodeWriter;
+			productName = CodeWriter;
+			productReference = "CodeWriter::CodeWriter::Product" /* CodeWriter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_51 /* Build configuration list for PBXNativeTarget "SwiftCodeWriter" */;
+			buildPhases = (
+				OBJ_54 /* Sources */,
+				OBJ_67 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_69 /* PBXTargetDependency */,
+			);
+			name = SwiftCodeWriter;
+			productName = SwiftCodeWriter;
+			productReference = "SwiftCodeWriter::SwiftCodeWriter::Product" /* SwiftCodeWriter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"SwiftCodeWriter::SwiftCodeWriterTests" /* SwiftCodeWriterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_38 /* Build configuration list for PBXNativeTarget "SwiftCodeWriterTests" */;
+			buildPhases = (
+				OBJ_41 /* Sources */,
+				OBJ_44 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_47 /* PBXTargetDependency */,
+				OBJ_49 /* PBXTargetDependency */,
+			);
+			name = SwiftCodeWriterTests;
+			productName = SwiftCodeWriterTests;
+			productReference = "SwiftCodeWriter::SwiftCodeWriterTests::Product" /* SwiftCodeWriterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 9999;
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "SwiftCodeWriter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = OBJ_5 /*  */;
+			productRefGroup = OBJ_33 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"SwiftCodeWriter::SwiftCodeWriterTests" /* SwiftCodeWriterTests */,
+				"SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */,
+				"CodeWriter::CodeWriter" /* CodeWriter */,
+				"SwiftCodeWriter::SwiftCodeWriterPackageTests::ProductTarget" /* SwiftCodeWriterPackageTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_41 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_42 /* SwiftClassWriterTests.swift in Sources */,
+				OBJ_43 /* SwiftFileWriterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_55 /* ClassDescription.swift in Sources */,
+				OBJ_56 /* ExtensionDescription.swift in Sources */,
+				OBJ_57 /* FileDescription.swift in Sources */,
+				OBJ_58 /* InitializerDescription.swift in Sources */,
+				OBJ_59 /* MethodDescription.swift in Sources */,
+				OBJ_60 /* PropertyDescription.swift in Sources */,
+				OBJ_61 /* ProtocolDescription.swift in Sources */,
+				OBJ_62 /* Visibility.swift in Sources */,
+				OBJ_63 /* ClassWriter.swift in Sources */,
+				OBJ_64 /* DocumentationMultiLineWriter.swift in Sources */,
+				OBJ_65 /* FileWriter.swift in Sources */,
+				OBJ_66 /* PropertyWriter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_73 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_74 /* CodeBuilder.swift in Sources */,
+				OBJ_75 /* CodeWriter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_47 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
+			targetProxy = A3E0F7561F4446BC00E4CD58 /* PBXContainerItemProxy */;
+		};
+		OBJ_49 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodeWriter::CodeWriter" /* CodeWriter */;
+			targetProxy = A3E0F7571F4446BC00E4CD58 /* PBXContainerItemProxy */;
+		};
+		OBJ_69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "CodeWriter::CodeWriter" /* CodeWriter */;
+			targetProxy = A3E0F7551F4446BC00E4CD58 /* PBXContainerItemProxy */;
+		};
+		OBJ_81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "SwiftCodeWriter::SwiftCodeWriterTests" /* SwiftCodeWriterTests */;
+			targetProxy = A3E0F7581F4446BC00E4CD58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				USE_HEADERMAP = NO;
+			};
+			name = Debug;
+		};
+		OBJ_39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftCodeWriter.xcodeproj/SwiftCodeWriterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCodeWriterTests;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = s;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "-DXcode";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = "macosx iphoneos iphonesimulator appletvos appletvsimulator watchos watchsimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				USE_HEADERMAP = NO;
+			};
+			name = Release;
+		};
+		OBJ_40 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftCodeWriter.xcodeproj/SwiftCodeWriterTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "@loader_path/../Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCodeWriterTests;
+			};
+			name = Release;
+		};
+		OBJ_52 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftCodeWriter.xcodeproj/SwiftCodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCodeWriter;
+			};
+			name = Debug;
+		};
+		OBJ_53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftCodeWriter.xcodeproj/SwiftCodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = SwiftCodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = SwiftCodeWriter;
+			};
+			name = Release;
+		};
+		OBJ_71 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftCodeWriter.xcodeproj/CodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodeWriter;
+			};
+			name = Debug;
+		};
+		OBJ_72 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				HEADER_SEARCH_PATHS = "$(inherited)";
+				INFOPLIST_FILE = SwiftCodeWriter.xcodeproj/CodeWriter_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				OTHER_LDFLAGS = "$(inherited)";
+				OTHER_SWIFT_FLAGS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = CodeWriter;
+				PRODUCT_MODULE_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGET_NAME = CodeWriter;
+			};
+			name = Release;
+		};
+		OBJ_79 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Debug;
+		};
+		OBJ_80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_2 /* Build configuration list for PBXProject "SwiftCodeWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_38 /* Build configuration list for PBXNativeTarget "SwiftCodeWriterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_39 /* Debug */,
+				OBJ_40 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_51 /* Build configuration list for PBXNativeTarget "SwiftCodeWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_52 /* Debug */,
+				OBJ_53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_70 /* Build configuration list for PBXNativeTarget "CodeWriter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_71 /* Debug */,
+				OBJ_72 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_78 /* Build configuration list for PBXAggregateTarget "SwiftCodeWriterPackageTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_79 /* Debug */,
+				OBJ_80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
