@@ -21,6 +21,11 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A38665171F45BE6F00A1534F /* ExtensionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38665161F45BE6F00A1534F /* ExtensionWriter.swift */; };
+		A38665191F45C22D00A1534F /* ExtensionWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38665181F45C22D00A1534F /* ExtensionWriterTests.swift */; };
+		A386651B1F45C7E500A1534F /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A386651A1F45C7E500A1534F /* EnumDescription.swift */; };
+		A386651D1F45D04000A1534F /* ModuleDependency.swift in Sources */ = {isa = PBXBuildFile; fileRef = A386651C1F45D04000A1534F /* ModuleDependency.swift */; };
+		A386651F1F45D70C00A1534F /* EnumWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A386651E1F45D70C00A1534F /* EnumWriter.swift */; };
 		A3BA2CE91F44A1AE0027453F /* ProtocolWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3BA2CE81F44A1AE0027453F /* ProtocolWriterTests.swift */; };
 		A3E0F76A1F444A0900E4CD58 /* ClassPropertyWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0F7691F444A0900E4CD58 /* ClassPropertyWriterTests.swift */; };
 		A3E0F76C1F44843700E4CD58 /* MethodWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E0F76B1F44843700E4CD58 /* MethodWriter.swift */; };
@@ -83,6 +88,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A38665161F45BE6F00A1534F /* ExtensionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriter.swift; sourceTree = "<group>"; };
+		A38665181F45C22D00A1534F /* ExtensionWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriterTests.swift; sourceTree = "<group>"; };
+		A386651A1F45C7E500A1534F /* EnumDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescription.swift; sourceTree = "<group>"; };
+		A386651C1F45D04000A1534F /* ModuleDependency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDependency.swift; sourceTree = "<group>"; };
+		A386651E1F45D70C00A1534F /* EnumWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWriter.swift; sourceTree = "<group>"; };
 		A3BA2CE81F44A1AE0027453F /* ProtocolWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProtocolWriterTests.swift; sourceTree = "<group>"; };
 		A3E0F7691F444A0900E4CD58 /* ClassPropertyWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassPropertyWriterTests.swift; sourceTree = "<group>"; };
 		A3E0F76B1F44843700E4CD58 /* MethodWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodWriter.swift; sourceTree = "<group>"; };
@@ -154,6 +164,8 @@
 				A3E0F76F1F44909B00E4CD58 /* InitializerWriter.swift */,
 				A3E0F7731F4499E500E4CD58 /* ProtocolWriter.swift */,
 				A3E0F7751F449B4900E4CD58 /* ProtocolPropertyWriter.swift */,
+				A38665161F45BE6F00A1534F /* ExtensionWriter.swift */,
+				A386651E1F45D70C00A1534F /* EnumWriter.swift */,
 			);
 			path = Writers;
 			sourceTree = "<group>";
@@ -176,6 +188,7 @@
 				A3E0F7711F4492F100E4CD58 /* InitializerWriterTests.swift */,
 				A3E0F7771F449EF300E4CD58 /* ProtocolPropertyWriterTests.swift */,
 				A3BA2CE81F44A1AE0027453F /* ProtocolWriterTests.swift */,
+				A38665181F45C22D00A1534F /* ExtensionWriterTests.swift */,
 			);
 			name = SwiftCodeWriterTests;
 			path = Tests/SwiftCodeWriterTests;
@@ -258,6 +271,8 @@
 				OBJ_15 /* PropertyDescription.swift */,
 				OBJ_16 /* ProtocolDescription.swift */,
 				OBJ_17 /* Visibility.swift */,
+				A386651A1F45C7E500A1534F /* EnumDescription.swift */,
+				A386651C1F45D04000A1534F /* ModuleDependency.swift */,
 			);
 			path = Descriptions;
 			sourceTree = "<group>";
@@ -351,6 +366,7 @@
 			files = (
 				A3E0F7721F4492F100E4CD58 /* InitializerWriterTests.swift in Sources */,
 				A3BA2CE91F44A1AE0027453F /* ProtocolWriterTests.swift in Sources */,
+				A38665191F45C22D00A1534F /* ExtensionWriterTests.swift in Sources */,
 				OBJ_42 /* ClassWriterTests.swift in Sources */,
 				A3E0F76A1F444A0900E4CD58 /* ClassPropertyWriterTests.swift in Sources */,
 				A3E0F7791F449EF600E4CD58 /* ProtocolPropertyWriterTests.swift in Sources */,
@@ -364,17 +380,21 @@
 			buildActionMask = 0;
 			files = (
 				A3E0F76C1F44843700E4CD58 /* MethodWriter.swift in Sources */,
+				A386651F1F45D70C00A1534F /* EnumWriter.swift in Sources */,
 				OBJ_55 /* ClassDescription.swift in Sources */,
 				OBJ_56 /* ExtensionDescription.swift in Sources */,
 				OBJ_57 /* FileDescription.swift in Sources */,
 				OBJ_58 /* InitializerDescription.swift in Sources */,
+				A38665171F45BE6F00A1534F /* ExtensionWriter.swift in Sources */,
 				OBJ_59 /* MethodDescription.swift in Sources */,
 				OBJ_60 /* PropertyDescription.swift in Sources */,
 				OBJ_61 /* ProtocolDescription.swift in Sources */,
 				OBJ_62 /* Visibility.swift in Sources */,
 				A3E0F7741F4499E500E4CD58 /* ProtocolWriter.swift in Sources */,
+				A386651B1F45C7E500A1534F /* EnumDescription.swift in Sources */,
 				OBJ_63 /* ClassWriter.swift in Sources */,
 				A3E0F7761F449B4900E4CD58 /* ProtocolPropertyWriter.swift in Sources */,
+				A386651D1F45D04000A1534F /* ModuleDependency.swift in Sources */,
 				OBJ_64 /* DocumentationWriter.swift in Sources */,
 				OBJ_65 /* FileWriter.swift in Sources */,
 				A3E0F7701F44909B00E4CD58 /* InitializerWriter.swift in Sources */,

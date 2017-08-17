@@ -7,13 +7,13 @@
 
 import Foundation
 
-public struct ExtensionDescription {
+public struct ExtensionDescription: ModuleDependency {
 
     public struct Options {
         public let visibility: Visibility
 
-        public init(visiblity: Visibility = .default) {
-            self.visibility = visiblity
+        public init(visibility: Visibility = .default) {
+            self.visibility = visibility
         }
     }
 
@@ -24,6 +24,9 @@ public struct ExtensionDescription {
     public var initializers: [InitializerDescription]
     public var methods: [MethodDescription]
     public var properties: [PropertyDescription]
+    public var nestedClasses: [ClassDescription]
+    public var nestedEnums: [EnumDescription]
+    public var attributes: [String]
     public let documentation: String?
 
     public init(target: String, options: Options = Options(), modules: [String] = [], documentation: String? = nil) {
@@ -35,22 +38,18 @@ public struct ExtensionDescription {
         self.initializers = []
         self.methods = []
         self.properties = []
+        self.nestedClasses = []
+        self.nestedEnums = []
+        self.attributes = []
     }
 
     public func moduleDependencies() -> [String] {
-        var modules = Set<String>()
-        modules.formUnion(self.modules)
-        for initializer in self.initializers {
-            modules.formUnion(initializer.modules)
-        }
-        for method in self.methods {
-            modules.formUnion(method.modules)
-        }
-        for property in self.properties {
-            if let module = property.module {
-                modules.insert(module)
-            }
-        }
-        return Array(modules)
+        var dependencies: [ModuleDependency] = []
+        dependencies += self.initializers as [ModuleDependency]
+        dependencies += self.methods as [ModuleDependency]
+        dependencies += self.properties as [ModuleDependency]
+        dependencies += self.nestedClasses as [ModuleDependency]
+        dependencies += self.nestedEnums as [ModuleDependency]
+        return ExtensionDescription.union(modules: self.modules, with: dependencies)
     }
 }

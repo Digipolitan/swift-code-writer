@@ -7,9 +7,10 @@
 
 import Foundation
 
-public struct FileDescription {
+public struct FileDescription: ModuleDependency {
 
     public var classes: [ClassDescription]
+    public var enums: [EnumDescription]
     public var protocols: [ProtocolDescription]
     public var extensions: [ExtensionDescription]
     public var methods: [MethodDescription]
@@ -19,6 +20,7 @@ public struct FileDescription {
     public init(documentation: String? = nil) {
         self.documentation = documentation
         self.classes = []
+        self.enums = []
         self.protocols = []
         self.extensions = []
         self.methods = []
@@ -26,24 +28,13 @@ public struct FileDescription {
     }
 
     public func moduleDependencies() -> [String] {
-        var modules = Set<String>()
-        for c in self.classes {
-            modules.formUnion(c.moduleDependencies())
-        }
-        for p in self.protocols {
-            modules.formUnion(p.moduleDependencies())
-        }
-        for e in self.extensions {
-            modules.formUnion(e.moduleDependencies())
-        }
-        for method in self.methods {
-             modules.formUnion(method.modules)
-        }
-        for property in self.properties {
-            if let module = property.module {
-                modules.insert(module)
-            }
-        }
-        return Array(modules)
+        var dependencies: [ModuleDependency] = []
+        dependencies += self.classes as [ModuleDependency]
+        dependencies += self.enums as [ModuleDependency]
+        dependencies += self.protocols as [ModuleDependency]
+        dependencies += self.extensions as [ModuleDependency]
+        dependencies += self.methods as [ModuleDependency]
+        dependencies += self.properties as [ModuleDependency]
+        return FileDescription.union(modules: [], with: dependencies)
     }
 }

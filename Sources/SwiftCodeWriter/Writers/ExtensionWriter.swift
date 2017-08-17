@@ -1,5 +1,5 @@
 //
-//  ClassWriter.swift
+//  ExtensionWriter.swift
 //  SwiftCodeWriter
 //
 //  Created by Benoit BRIATTE on 10/08/2017.
@@ -8,15 +8,15 @@
 import Foundation
 import CodeWriter
 
-public struct ClassWriter: CodeWriter {
+public struct ExtensionWriter: CodeWriter {
 
-    public typealias Description = ClassDescription
+    public typealias Description = ExtensionDescription
 
-    public static let `default` = ClassWriter()
+    public static let `default` = ExtensionWriter()
 
     private init() {}
 
-    public func write(description: ClassDescription, depth: Int) -> String {
+    public func write(description: ExtensionDescription, depth: Int) -> String {
         var parts: [String] = []
 
         if let documentation = description.documentation {
@@ -31,37 +31,30 @@ public struct ClassWriter: CodeWriter {
         if description.options.visibility != .default {
             line.append(description.options.visibility.rawValue)
         }
-        if description.options.isReferenceType {
-            line.append("class")
-        } else {
-            line.append("struct")
-        }
+        line.append("extension")
 
-        var classTitle = description.name
+        var targetTitle = description.target
         var commaImplementsSeparator = false
-        if let parent = description.parent {
-            classTitle += ": \(parent)"
-            commaImplementsSeparator = true
-        }
         description.implements.forEach {
             if commaImplementsSeparator {
-                classTitle += ","
+                targetTitle += ","
             } else {
-                classTitle += ":"
+                targetTitle += ":"
                 commaImplementsSeparator = true
             }
-            classTitle += " \($0)"
+            targetTitle += " \($0)"
         }
 
-        line.append(classTitle)
+        line.append(targetTitle)
         line.append("{")
 
         builder.add(string: line.joined(separator: " "), indent: true)
         parts.append(builder.build())
 
         var body: [String] = []
+
         if description.nestedClasses.count > 0 {
-            body.append(description.nestedClasses.map { self.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
+            body.append(description.nestedClasses.map { ClassWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
         }
         if description.nestedEnums.count > 0 {
             body.append(description.nestedEnums.map { EnumWriter.default.write(description: $0, depth: depth + 1) }.joined(separator: "\n\n"))
@@ -78,7 +71,7 @@ public struct ClassWriter: CodeWriter {
         if body.count > 0 {
             parts.append(body.joined(separator: "\n\n"))
         }
-        
+
         let closeBuilder = CodeBuilder(depth: depth)
         closeBuilder.add(string: "}", indent: true, crlf: false)
         parts.append(closeBuilder.build())
@@ -86,4 +79,3 @@ public struct ClassWriter: CodeWriter {
         return parts.joined(separator: "\n")
     }
 }
-

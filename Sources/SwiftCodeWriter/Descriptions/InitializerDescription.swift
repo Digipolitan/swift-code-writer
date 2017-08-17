@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public struct InitializerDescription {
+public struct InitializerDescription: ModuleDependency {
 
     public struct Options {
         public let visibility: Visibility
@@ -42,5 +42,9 @@ public struct InitializerDescription {
         self.arguments = arguments
         self.attributes = attributes
         self.documentation = documentation
+    }
+
+    public func moduleDependencies() -> [String] {
+        return self.modules
     }
 }

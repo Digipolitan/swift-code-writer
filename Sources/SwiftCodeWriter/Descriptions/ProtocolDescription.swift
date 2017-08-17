@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct ProtocolDescription {
+public struct ProtocolDescription: ModuleDependency {
 
     public struct Options {
         public let visibility: Visibility
@@ -40,19 +40,10 @@ public struct ProtocolDescription {
     }
 
     public func moduleDependencies() -> [String] {
-        var modules = Set<String>()
-        modules.formUnion(self.modules)
-        for initializer in self.initializers {
-            modules.formUnion(initializer.modules)
-        }
-        for method in self.methods {
-            modules.formUnion(method.modules)
-        }
-        for property in self.properties {
-            if let module = property.module {
-                modules.insert(module)
-            }
-        }
-        return Array(modules)
+        var dependencies: [ModuleDependency] = []
+        dependencies += self.initializers as [ModuleDependency]
+        dependencies += self.methods as [ModuleDependency]
+        dependencies += self.properties as [ModuleDependency]
+        return ProtocolDescription.union(modules: self.modules, with: dependencies)
     }
 }

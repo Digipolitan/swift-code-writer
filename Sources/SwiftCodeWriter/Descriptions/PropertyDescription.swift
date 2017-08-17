@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public struct PropertyDescription {
+public struct PropertyDescription: ModuleDependency {
 
     public struct Options {
         public let getVisibility: Visibility
@@ -41,20 +41,24 @@ public struct PropertyDescription {
     public let name: String
     public let type: String?
     public let options: Options
-    public let module: String?
+    public let modules: [String]
     public let value: CodeBuilder?
     public let attributes: [String]?
     public let compute: ComputeDescription?
     public let documentation: String?
 
-    public init(name: String, options: Options = Options(), type: String? = nil, value: CodeBuilder? = nil, module: String? = nil, attributes: [String]? = nil, compute: ComputeDescription? = nil, documentation: String? = nil) {
+    public init(name: String, options: Options = Options(), modules: [String] = [], type: String? = nil, value: CodeBuilder? = nil, attributes: [String]? = nil, compute: ComputeDescription? = nil, documentation: String? = nil) {
         self.name = name
         self.options = options
         self.type = type
-        self.module = module
         self.value = value
         self.attributes = attributes
         self.compute = compute
         self.documentation = documentation
+        self.modules = modules
+    }
+
+    public func moduleDependencies() -> [String] {
+        return self.modules
     }
 }

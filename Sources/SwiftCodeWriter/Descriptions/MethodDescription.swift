@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public struct MethodDescription {
+public struct MethodDescription: ModuleDependency {
 
     public struct Options {
         public let visibility: Visibility
@@ -44,5 +44,9 @@ public struct MethodDescription {
         self.returnType = returnType
         self.attributes = attributes
         self.documentation = documentation
+    }
+
+    public func moduleDependencies() -> [String] {
+        return self.modules
     }
 }

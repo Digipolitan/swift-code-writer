@@ -26,6 +26,15 @@ public struct FileWriter: CodeWriter {
 
         parts.append(contentsOf: description.moduleDependencies().map({ "import \($0)" }))
 
+        /*
+
+        ublic var classes: [ClassDescription]
+        public var protocols: [ProtocolDescription]
+        public var extensions: [ExtensionDescription]
+        public var methods: [MethodDescription]
+        public var properties: [PropertyDescription]
+        public let documentation: String?
+ */
         return parts.joined(separator: "\n")
     }
 }
