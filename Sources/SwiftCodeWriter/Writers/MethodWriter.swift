@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public struct MethodWriter: CodeWriter {
+struct MethodWriter: CodeWriter {
 
     public typealias Description = MethodDescription
 

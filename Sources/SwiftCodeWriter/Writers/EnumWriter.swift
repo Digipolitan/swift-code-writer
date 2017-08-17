@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public struct EnumWriter: CodeWriter {
+struct EnumWriter: CodeWriter {
 
     public typealias Description = EnumDescription
 

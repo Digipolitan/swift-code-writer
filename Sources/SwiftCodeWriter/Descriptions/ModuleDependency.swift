@@ -12,7 +12,7 @@ public protocol ModuleDependency {
     func moduleDependencies() -> [String]
 }
 
-extension ModuleDependency {
+public extension ModuleDependency {
     
     public static func union(modules: [String], with dependencies: [ModuleDependency]) -> [String] {
         var res = Set<String>(modules)

@@ -8,7 +8,7 @@
 import Foundation
 import CodeWriter
 
-public struct ProtocolWriter: CodeWriter {
+struct ProtocolWriter: CodeWriter {
 
     public typealias Description = ProtocolDescription
 

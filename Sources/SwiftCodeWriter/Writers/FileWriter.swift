@@ -18,23 +18,32 @@ public struct FileWriter: CodeWriter {
 
     public func write(description: FileDescription, depth: Int) -> String {
 
-        var parts: [String] = []
-
+        var body: [String] = []
         if let documentation = description.documentation {
-            parts.append(DocumentationWriter.MultiLine.default.write(documentation: documentation, mode: .slashes))
+            body.append(DocumentationWriter.MultiLine.default.write(documentation: documentation, mode: .slashes))
         }
-
-        parts.append(contentsOf: description.moduleDependencies().map({ "import \($0)" }))
-
-        /*
-
-        ublic var classes: [ClassDescription]
-        public var protocols: [ProtocolDescription]
-        public var extensions: [ExtensionDescription]
-        public var methods: [MethodDescription]
-        public var properties: [PropertyDescription]
-        public let documentation: String?
- */
-        return parts.joined(separator: "\n\n")
+        let modules = description.moduleDependencies()
+        if modules.count > 0 {
+            body.append(description.moduleDependencies().map { "import \($0)" }.joined(separator: "\n"))
+        }
+        if description.properties.count > 0 {
+            body.append(description.properties.map { ClassPropertyWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n"))
+        }
+        if description.methods.count > 0 {
+            body.append(description.methods.map { MethodWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
+        }
+        if description.protocols.count > 0 {
+            body.append(description.protocols.map { ProtocolWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
+        }
+        if description.classes.count > 0 {
+            body.append(description.classes.map { ClassWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
+        }
+        if description.enums.count > 0 {
+            body.append(description.enums.map { EnumWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
+        }
+        if description.extensions.count > 0 {
+            body.append(description.extensions.map { ExtensionWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
+        }
+        return body.joined(separator: "\n\n")
     }
 }

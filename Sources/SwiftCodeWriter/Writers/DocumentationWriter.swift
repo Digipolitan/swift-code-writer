@@ -8,14 +8,14 @@
 import Foundation
 import CodeWriter
 
-public enum DocumentationWriter {
+enum DocumentationWriter {
 
     public enum Mode {
         case stars
         case slashes
     }
 
-    public struct SingleLine {
+    struct SingleLine {
 
         public static let `default` = SingleLine()
 
