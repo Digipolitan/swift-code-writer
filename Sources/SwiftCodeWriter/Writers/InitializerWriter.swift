@@ -20,9 +20,9 @@ public struct InitializerWriter: CodeWriter {
         let builder = CodeBuilder(depth: depth)
         if let documentation = description.documentation {
             if documentation.index(of: "\n") != nil {
-                builder.add(string: DocumentationWriter.MultiLine.default.write(documentation: documentation, depth: depth))
+                builder.add(string: DocumentationWriter.MultiLine.default.write(documentation: documentation, depth: depth), crlf: true)
             } else {
-                builder.add(string: DocumentationWriter.SingleLine.default.write(documentation: documentation, depth: depth))
+                builder.add(line: DocumentationWriter.SingleLine.default.write(documentation: documentation))
             }
         }
         description.attributes?.forEach { builder.add(line: $0) }

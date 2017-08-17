@@ -88,12 +88,31 @@ public struct EnumWriter: CodeWriter {
         return parts.joined(separator: "\n")
     }
 
-    private func write(enumCase: EnumDescription.Case, depth: Int) -> [String] {
+    private func write(enumCase: EnumDescription.Case, depth: Int) -> String {
         let builder = CodeBuilder(depth: depth)
+
+        if let documentation = enumCase.documentation {
+            if documentation.index(of: "\n") != nil {
+                builder.add(string: DocumentationWriter.MultiLine.default.write(documentation: documentation, depth: depth), crlf: true)
+            } else {
+                builder.add(line: DocumentationWriter.SingleLine.default.write(documentation: documentation))
+            }
+        }
         var line: [String] = []
         if enumCase.isIndirect {
             line.append("indirect")
         }
-        
+        line.append("case")
+        var caseTitle = enumCase.name
+        if let associatedValues = enumCase.associatedValues {
+            caseTitle += "(\(associatedValues.joined(separator: ", ")))"
+        }
+        line.append(caseTitle)
+        if let rawValue = enumCase.rawValue {
+            line.append("=")
+            line.append(rawValue)
+        }
+        builder.add(string: line.joined(separator: " "), indent: true)
+        return builder.build()
     }
 }

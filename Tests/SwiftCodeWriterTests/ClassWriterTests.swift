@@ -4,9 +4,14 @@ import CodeWriter
 
 class ClassWriterTests: XCTestCase {
 
-    func testWriteEmptyClass() {
-        let classDescription = ClassDescription(name: "Sample")
-        XCTAssertEqual("class Sample {\n}", ClassWriter.default.write(description: classDescription))
+    func testWriteEmptyClassWithDocumentation() {
+        let classDescription = ClassDescription(name: "Sample", documentation: "MySampleClass")
+        XCTAssertEqual("/**\n * MySampleClass\n */\nclass Sample {\n}", ClassWriter.default.write(description: classDescription))
+    }
+
+    func testWriteEmptyStructWithDocumentation() {
+        let classDescription = ClassDescription(name: "Sample", options: .init(isReferenceType: false), documentation: "MySampleStruct")
+        XCTAssertEqual("/**\n * MySampleStruct\n */\nstruct Sample {\n}", ClassWriter.default.write(description: classDescription))
     }
 
     func testWriteEmptyPublicClassWithExtends() {
@@ -49,7 +54,8 @@ class ClassWriterTests: XCTestCase {
     }
     
     static var allTests = [
-        ("testWriteEmptyClass", testWriteEmptyClass),
+        ("testWriteEmptyClassWithDocumentation", testWriteEmptyClassWithDocumentation),
+        ("testWriteEmptyStructWithDocumentation", testWriteEmptyStructWithDocumentation),
         ("testWriteEmptyPublicClassWithExtends", testWriteEmptyPublicClassWithExtends),
         ("testWriteEmptyClassWithExtendsAnd2Implements", testWriteEmptyClassWithExtendsAnd2Implements),
         ("testWriteEmptyClassWithImplementsOnly", testWriteEmptyClassWithImplementsOnly),

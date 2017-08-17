@@ -35,6 +35,6 @@ public struct FileWriter: CodeWriter {
         public var properties: [PropertyDescription]
         public let documentation: String?
  */
-        return parts.joined(separator: "\n")
+        return parts.joined(separator: "\n\n")
     }
 }

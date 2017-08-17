@@ -21,6 +21,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		A3777F231F45DA76006CB4C6 /* EnumWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3777F221F45DA76006CB4C6 /* EnumWriterTests.swift */; };
 		A38665171F45BE6F00A1534F /* ExtensionWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38665161F45BE6F00A1534F /* ExtensionWriter.swift */; };
 		A38665191F45C22D00A1534F /* ExtensionWriterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A38665181F45C22D00A1534F /* ExtensionWriterTests.swift */; };
 		A386651B1F45C7E500A1534F /* EnumDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A386651A1F45C7E500A1534F /* EnumDescription.swift */; };
@@ -88,6 +89,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A3777F221F45DA76006CB4C6 /* EnumWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumWriterTests.swift; sourceTree = "<group>"; };
 		A38665161F45BE6F00A1534F /* ExtensionWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriter.swift; sourceTree = "<group>"; };
 		A38665181F45C22D00A1534F /* ExtensionWriterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionWriterTests.swift; sourceTree = "<group>"; };
 		A386651A1F45C7E500A1534F /* EnumDescription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnumDescription.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				A3E0F7771F449EF300E4CD58 /* ProtocolPropertyWriterTests.swift */,
 				A3BA2CE81F44A1AE0027453F /* ProtocolWriterTests.swift */,
 				A38665181F45C22D00A1534F /* ExtensionWriterTests.swift */,
+				A3777F221F45DA76006CB4C6 /* EnumWriterTests.swift */,
 			);
 			name = SwiftCodeWriterTests;
 			path = Tests/SwiftCodeWriterTests;
@@ -369,6 +372,7 @@
 				A38665191F45C22D00A1534F /* ExtensionWriterTests.swift in Sources */,
 				OBJ_42 /* ClassWriterTests.swift in Sources */,
 				A3E0F76A1F444A0900E4CD58 /* ClassPropertyWriterTests.swift in Sources */,
+				A3777F231F45DA76006CB4C6 /* EnumWriterTests.swift in Sources */,
 				A3E0F7791F449EF600E4CD58 /* ProtocolPropertyWriterTests.swift in Sources */,
 				OBJ_43 /* FileWriterTests.swift in Sources */,
 				A3E0F76E1F44876500E4CD58 /* MethodWriterTests.swift in Sources */,

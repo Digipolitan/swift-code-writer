@@ -2,44 +2,17 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-enum Test: Int {
-    enum Z {
-
-    }
-    struct W {
-
-    }
-    class K {
-
-    }
-
-    case a
-    case b
-
-    init?(text: String) {
-        self.init(rawValue: 2)
-    }
-
-    private static let c = ""
-
-    func test() {
-
-    }
-
-}
-
 class ExtensionWriterTests: XCTestCase {
 
-    func testWriteEmptyExtension() {
-        Test.a.test()
-        let extensionDescription = ExtensionDescription(target: "String")
-        XCTAssertEqual("extension String {\n}", ExtensionWriter.default.write(description: extensionDescription))
+    func testWriteEmptyExtensionWithDocumentation() {
+        let extensionDescription = ExtensionDescription(target: "String", documentation: "MyStringExtension")
+        XCTAssertEqual("/**\n * MyStringExtension\n */\nextension String {\n}", ExtensionWriter.default.write(description: extensionDescription))
     }
 
     func testWriteEmptyPublicExtensionWithImplements() {
         var extensionDescription = ExtensionDescription(target: "String", options: .init(visibility: .public))
-        extensionDescription.implements.append("Compatable")
-        XCTAssertEqual("public extension String: Compatable {\n}", ExtensionWriter.default.write(description: extensionDescription))
+        extensionDescription.implements.append("Comparable")
+        XCTAssertEqual("public extension String: Comparable {\n}", ExtensionWriter.default.write(description: extensionDescription))
     }
 
     func testWriteExtensionWithProperty() {
@@ -65,7 +38,7 @@ class ExtensionWriterTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testWriteEmptyExtension", testWriteEmptyExtension),
+        ("testWriteEmptyExtensionWithDocumentation", testWriteEmptyExtensionWithDocumentation),
         ("testWriteEmptyPublicExtensionWithImplements", testWriteEmptyPublicExtensionWithImplements),
         ("testWriteExtensionWithProperty", testWriteExtensionWithProperty),
         ("testWriteExtensionWithAttributes", testWriteExtensionWithAttributes),

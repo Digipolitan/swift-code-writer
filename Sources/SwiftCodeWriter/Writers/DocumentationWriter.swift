@@ -21,14 +21,11 @@ public enum DocumentationWriter {
 
         private init() { }
 
-        public func write(documentation: String, depth: Int = 0, mode: Mode = .slashes) -> String {
-            let builder = CodeBuilder(depth: depth)
+        public func write(documentation: String, mode: Mode = .slashes) -> String {
             if mode == .stars {
-                builder.add(line: "/** \(documentation) */")
-            } else {
-                builder.add(line: "// \(documentation)")
+                return "/** \(documentation) */"
             }
-            return builder.build()
+            return "// \(documentation)"
         }
     }
 
@@ -57,7 +54,7 @@ public enum DocumentationWriter {
                     builder.add(line: "//")
                 }
             }
-            builder.add(line: "//")
+            builder.add(string: "//", indent: true)
         }
 
         private func writeStars(documentation: String, to builder: CodeBuilder) {
@@ -69,7 +66,7 @@ public enum DocumentationWriter {
                     builder.add(line: " *")
                 }
             }
-            builder.add(line: " */")
+            builder.add(string: " */", indent: true)
         }
     }
 }

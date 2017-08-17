@@ -3,9 +3,9 @@ import XCTest
 
 class ProtocolWriterTests: XCTestCase {
 
-    func testWriteEmptyProtocol() {
-        let protocolDescription = ProtocolDescription(name: "Sample")
-        XCTAssertEqual("protocol Sample {\n}", ProtocolWriter.default.write(description: protocolDescription))
+    func testWriteEmptyProtocolWithDocumentation() {
+        let protocolDescription = ProtocolDescription(name: "Sample", documentation: "MySampleProtocol")
+        XCTAssertEqual("/**\n * MySampleProtocol\n */\nprotocol Sample {\n}", ProtocolWriter.default.write(description: protocolDescription))
     }
 
     func testWriteEmptyPublicProtocolWith2Implements() {
@@ -43,7 +43,7 @@ class ProtocolWriterTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testWriteEmptyProtocol", testWriteEmptyProtocol),
+        ("testWriteEmptyProtocolWithDocumentation", testWriteEmptyProtocolWithDocumentation),
         ("testWriteEmptyPublicProtocolWith2Implements", testWriteEmptyPublicProtocolWith2Implements),
         ("testWriteEmptyProtocolWithImplementsOnly", testWriteEmptyProtocolWithImplementsOnly),
         ("testWriteProtocolWith2Properties", testWriteProtocolWith2Properties),

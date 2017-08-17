@@ -25,13 +25,15 @@ public struct EnumDescription: ModuleDependency {
         public let associatedValues: [String]?
         public var modules: [String]
         public let isIndirect: Bool
+        public let documentation: String?
 
-        public init(name: String, rawValue: String? = nil, associatedValues: [String]? = nil, modules: [String] = [], isIndirect: Bool = false) {
+        public init(name: String, rawValue: String? = nil, associatedValues: [String]? = nil, modules: [String] = [], isIndirect: Bool = false, documentation: String? = nil) {
             self.name = name
             self.rawValue = rawValue
             self.associatedValues = associatedValues
             self.isIndirect = isIndirect
             self.modules = modules
+            self.documentation = documentation
         }
     }
 
