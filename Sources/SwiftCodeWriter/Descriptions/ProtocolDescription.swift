@@ -12,8 +12,8 @@ public struct ProtocolDescription: ModuleDependency {
     public struct Options {
         public let visibility: Visibility
 
-        public init(visiblity: Visibility = .default) {
-            self.visibility = visiblity
+        public init(visibility: Visibility = .default) {
+            self.visibility = visibility
         }
     }
 
