@@ -41,6 +41,9 @@ struct ClassPropertyWriter: CodeWriter {
         if description.options.isStatic {
             options.append("static")
         }
+        if description.options.isOverride {
+            options.append("override")
+        }
         if description.options.isWeak {
             options.append("weak")
         }

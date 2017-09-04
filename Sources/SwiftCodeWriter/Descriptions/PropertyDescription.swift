@@ -15,14 +15,16 @@ public struct PropertyDescription: ModuleDependency {
         public let setVisibility: Visibility?
         public let isLazy: Bool
         public let isStatic: Bool
+        public let isOverride: Bool
         public let isConstant: Bool
         public let isWeak: Bool
 
-        public init(getVisibility: Visibility = .default, setVisibility: Visibility? = nil, isLazy: Bool = false, isStatic: Bool = false, isConstant: Bool = false, isWeak: Bool = false) {
+        public init(getVisibility: Visibility = .default, setVisibility: Visibility? = nil, isLazy: Bool = false, isStatic: Bool = false, isOverride: Bool = false, isConstant: Bool = false, isWeak: Bool = false) {
             self.getVisibility = getVisibility
             self.setVisibility = setVisibility
             self.isLazy = isLazy
             self.isStatic = isStatic
+            self.isOverride = isOverride
             self.isConstant = isConstant
             self.isWeak = isWeak
         }
