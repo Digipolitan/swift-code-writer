@@ -29,9 +29,6 @@ public struct FileWriter: CodeWriter {
         if description.properties.count > 0 {
             body.append(description.properties.map { ClassPropertyWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n"))
         }
-        if description.methods.count > 0 {
-            body.append(description.methods.map { MethodWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
-        }
         if description.protocols.count > 0 {
             body.append(description.protocols.map { ProtocolWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
         }
@@ -43,6 +40,9 @@ public struct FileWriter: CodeWriter {
         }
         if description.extensions.count > 0 {
             body.append(description.extensions.map { ExtensionWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
+        }
+        if description.methods.count > 0 {
+            body.append(description.methods.map { MethodWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
         }
         return body.joined(separator: "\n\n")
     }
