@@ -9,7 +9,7 @@ class ProtocolWriterTests: XCTestCase {
     }
 
     func testWriteEmptyPublicProtocolWith2Implements() {
-        var protocolDescription = ProtocolDescription(name: "Sample", options: .init(visiblity: .public))
+        var protocolDescription = ProtocolDescription(name: "Sample", options: .init(visibility: .public))
         protocolDescription.implements.append("ITest")
         protocolDescription.implements.append("ITest2")
         XCTAssertEqual("public protocol Sample: ITest, ITest2 {\n}", ProtocolWriter.default.write(description: protocolDescription))
