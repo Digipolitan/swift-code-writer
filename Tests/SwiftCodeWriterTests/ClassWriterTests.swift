@@ -36,7 +36,7 @@ class ClassWriterTests: XCTestCase {
         var classDescription = ClassDescription(name: "Sample")
         classDescription.properties.append(PropertyDescription(name: "hello", type: "String?"))
         classDescription.properties.append(PropertyDescription(name: "other", type: "Int", documentation: "required property !"))
-        XCTAssertEqual("class Sample {\n\tvar hello: String?\n\t// required property !\n\tvar other: Int\n}", ClassWriter.default.write(description: classDescription))
+        XCTAssertEqual("class Sample {\n    var hello: String?\n    // required property !\n    var other: Int\n}", ClassWriter.default.write(description: classDescription))
     }
 
     func testWriteClassWithAttributes() {
@@ -50,7 +50,7 @@ class ClassWriterTests: XCTestCase {
         classDescription.properties.append(PropertyDescription(name: "hello", type: "String?"))
         classDescription.methods.append(MethodDescription(name: "test", code: CodeBuilder()))
         classDescription.methods.append(MethodDescription(name: "test2", code: CodeBuilder()))
-        XCTAssertEqual("class Sample {\n\tvar hello: String?\n\n\tfunc test() {\n\t}\n\n\tfunc test2() {\n\t}\n}", ClassWriter.default.write(description: classDescription))
+        XCTAssertEqual("class Sample {\n    var hello: String?\n\n    func test() {\n    }\n\n    func test2() {\n    }\n}", ClassWriter.default.write(description: classDescription))
     }
     
     static var allTests = [

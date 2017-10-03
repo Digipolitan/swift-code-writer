@@ -21,7 +21,7 @@ class InitializerWriterTests: XCTestCase {
 
     func testWriteRequiredAttributesDocumentationAndReturnWithImpl() {
         let initializerDescription = InitializerDescription(code: CodeBuilder.from(code: "// TODO"), options: .init(isRequired: true), attributes: ["@available(iOS 10.0, macOS 10.12, *)"], documentation: "multi\nline")
-        XCTAssertEqual("/**\n * multi\n * line\n */\n@available(iOS 10.0, macOS 10.12, *)\nrequired init() {\n\t// TODO\n}", InitializerWriter.default.write(description: initializerDescription))
+        XCTAssertEqual("/**\n * multi\n * line\n */\n@available(iOS 10.0, macOS 10.12, *)\nrequired init() {\n    // TODO\n}", InitializerWriter.default.write(description: initializerDescription))
     }
 
     func testMultiLineImpl() {
@@ -29,7 +29,7 @@ class InitializerWriterTests: XCTestCase {
         builder.add(line: "first")
         builder.add(line: "second")
         let initializerDescription = InitializerDescription(code: builder)
-        XCTAssertEqual("init() {\n\tfirst\n\tsecond\n}", InitializerWriter.default.write(description: initializerDescription))
+        XCTAssertEqual("init() {\n    first\n    second\n}", InitializerWriter.default.write(description: initializerDescription))
     }
 
     static var allTests = [

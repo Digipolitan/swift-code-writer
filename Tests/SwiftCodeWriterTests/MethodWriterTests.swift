@@ -21,7 +21,7 @@ class MethodWriterTests: XCTestCase {
 
     func testWriteMutatingAttributesDocumentationAndReturnWithImpl() {
         let methodDescription = MethodDescription(name: "sample", code: CodeBuilder.from(code: "return self"), options: .init(isMutating: true), returnType: "Self", attributes: ["@discardableResult"], documentation: "multi\nline")
-        XCTAssertEqual("/**\n * multi\n * line\n */\n@discardableResult\nmutating func sample() -> Self {\n\treturn self\n}", MethodWriter.default.write(description: methodDescription))
+        XCTAssertEqual("/**\n * multi\n * line\n */\n@discardableResult\nmutating func sample() -> Self {\n    return self\n}", MethodWriter.default.write(description: methodDescription))
     }
 
     func testMultiLineImpl() {
@@ -29,7 +29,7 @@ class MethodWriterTests: XCTestCase {
         builder.add(line: "first")
         builder.add(line: "second")
         let methodDescription = MethodDescription(name: "sample", code: builder)
-        XCTAssertEqual("func sample() {\n\tfirst\n\tsecond\n}", MethodWriter.default.write(description: methodDescription))
+        XCTAssertEqual("func sample() {\n    first\n    second\n}", MethodWriter.default.write(description: methodDescription))
     }
 
     static var allTests = [

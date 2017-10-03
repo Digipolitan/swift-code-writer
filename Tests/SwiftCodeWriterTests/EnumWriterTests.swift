@@ -31,7 +31,7 @@ class EnumWriterTests: XCTestCase {
         var enumDescription = EnumDescription(name: "Direction", rawType: "Int")
         enumDescription.cases.append(.init(name: "left", rawValue: "1"))
         enumDescription.cases.append(.init(name: "right", documentation: "Turn right"))
-        XCTAssertEqual("enum Direction: Int {\n\tcase left = 1\n\t// Turn right\n\tcase right\n}", EnumWriter.default.write(description: enumDescription))
+        XCTAssertEqual("enum Direction: Int {\n    case left = 1\n    // Turn right\n    case right\n}", EnumWriter.default.write(description: enumDescription))
     }
 
     static var allTests = [

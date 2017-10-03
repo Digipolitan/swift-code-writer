@@ -25,7 +25,7 @@ class ProtocolWriterTests: XCTestCase {
         var protocolDescription = ProtocolDescription(name: "Sample")
         protocolDescription.properties.append(PropertyDescription(name: "hello", type: "String?"))
         protocolDescription.properties.append(PropertyDescription(name: "other", options: .init(setVisibility: .private), type: "Int", documentation: "required property !"))
-        XCTAssertEqual("protocol Sample {\n\tvar hello: String? { get set }\n\t// required property !\n\tvar other: Int { get }\n}", ProtocolWriter.default.write(description: protocolDescription))
+        XCTAssertEqual("protocol Sample {\n    var hello: String? { get set }\n    // required property !\n    var other: Int { get }\n}", ProtocolWriter.default.write(description: protocolDescription))
     }
 
     func testWriteProtocolWithAttributes() {
@@ -39,7 +39,7 @@ class ProtocolWriterTests: XCTestCase {
         protocolDescription.properties.append(PropertyDescription(name: "hello", type: "String?"))
         protocolDescription.methods.append(MethodDescription(name: "test"))
         protocolDescription.methods.append(MethodDescription(name: "test2"))
-        XCTAssertEqual("protocol Sample {\n\tvar hello: String? { get set }\n\n\tfunc test()\n\n\tfunc test2()\n}", ProtocolWriter.default.write(description: protocolDescription))
+        XCTAssertEqual("protocol Sample {\n    var hello: String? { get set }\n\n    func test()\n\n    func test2()\n}", ProtocolWriter.default.write(description: protocolDescription))
     }
 
     static var allTests = [
@@ -50,4 +50,3 @@ class ProtocolWriterTests: XCTestCase {
         ("testWriteProtocolWithAttributes", testWriteProtocolWithAttributes)
     ]
 }
-

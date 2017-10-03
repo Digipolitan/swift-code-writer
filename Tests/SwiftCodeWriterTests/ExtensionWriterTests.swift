@@ -19,7 +19,7 @@ class ExtensionWriterTests: XCTestCase {
         var extensionDescription = ExtensionDescription(target: "String")
         let getBuilder = CodeBuilder.from(code: "return \"hello\"")
         extensionDescription.properties.append(PropertyDescription(name: "hello", type: "String", compute: .init(get: getBuilder)))
-        XCTAssertEqual("extension String {\n\tvar hello: String {\n\t\treturn \"hello\"\n\t}\n}", ExtensionWriter.default.write(description: extensionDescription))
+        XCTAssertEqual("extension String {\n    var hello: String {\n        return \"hello\"\n    }\n}", ExtensionWriter.default.write(description: extensionDescription))
     }
 
     func testWriteExtensionWithAttributes() {
@@ -34,7 +34,7 @@ class ExtensionWriterTests: XCTestCase {
         extensionDescription.properties.append(PropertyDescription(name: "hello", type: "String", compute: .init(get: getBuilder)))
         extensionDescription.methods.append(MethodDescription(name: "test", code: CodeBuilder()))
         extensionDescription.methods.append(MethodDescription(name: "test2", code: CodeBuilder()))
-        XCTAssertEqual("extension String {\n\tvar hello: String {\n\t\treturn \"hello\"\n\t}\n\n\tfunc test() {\n\t}\n\n\tfunc test2() {\n\t}\n}", ExtensionWriter.default.write(description: extensionDescription))
+        XCTAssertEqual("extension String {\n    var hello: String {\n        return \"hello\"\n    }\n\n    func test() {\n    }\n\n    func test2() {\n    }\n}", ExtensionWriter.default.write(description: extensionDescription))
     }
 
     static var allTests = [
