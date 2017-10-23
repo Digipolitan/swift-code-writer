@@ -44,6 +44,6 @@ public struct FileWriter: CodeWriter {
         if description.methods.count > 0 {
             body.append(description.methods.map { MethodWriter.default.write(description: $0, depth: depth) }.joined(separator: "\n\n"))
         }
-        return body.joined(separator: "\n\n")
+        return body.joined(separator: "\n\n") + "\n"
     }
 }
