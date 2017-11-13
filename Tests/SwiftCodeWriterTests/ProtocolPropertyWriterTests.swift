@@ -31,4 +31,3 @@ class ProtocolPropertyWriterTests: XCTestCase {
         ("testPropertyWithSingleLineDocumentation", testPropertyWithSingleLineDocumentation)
     ]
 }
-

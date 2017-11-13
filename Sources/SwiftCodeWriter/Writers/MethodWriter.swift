@@ -67,7 +67,7 @@ struct MethodWriter: CodeWriter {
         } else {
             builder.add(string: options.joined(separator: " "), indent: true)
         }
-        
+
         return builder.build()
     }
 }

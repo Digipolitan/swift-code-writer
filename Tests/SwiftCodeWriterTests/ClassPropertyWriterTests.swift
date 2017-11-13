@@ -26,7 +26,8 @@ class ClassPropertyWriterTests: XCTestCase {
         let getBuilder = CodeBuilder.from(code: "return self._sample", crlf: true)
         let setBuilder = CodeBuilder.from(code: "self._sample = newValue", crlf: true)
         let propertyDescription = PropertyDescription(name: "sample", options: .init(getVisibility: .open, isWeak: true), type: "Int", compute: .init(get: getBuilder, set: setBuilder))
-        XCTAssertEqual("open weak var sample: Int {\n    get {\n        return self._sample\n    }\n    set {\n        self._sample = newValue\n    }\n}", ClassPropertyWriter.default.write(description: propertyDescription))
+        XCTAssertEqual("open weak var sample: Int {\n    get {\n        return self._sample\n    }\n    set {\n        self._sample = newValue\n    }\n}",
+                       ClassPropertyWriter.default.write(description: propertyDescription))
     }
 
     func testPropertyWithSingleLineDocumentationWith1Depth() {

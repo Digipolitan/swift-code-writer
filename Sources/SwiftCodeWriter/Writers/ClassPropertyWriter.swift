@@ -85,9 +85,7 @@ struct ClassPropertyWriter: CodeWriter {
             builder.leftTab()
             builder.add(string: "}", indent: true)
         }
-        
+
         return builder.build()
     }
 }
-
-

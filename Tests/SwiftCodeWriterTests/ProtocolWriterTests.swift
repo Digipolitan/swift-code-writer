@@ -25,7 +25,8 @@ class ProtocolWriterTests: XCTestCase {
         var protocolDescription = ProtocolDescription(name: "Sample")
         protocolDescription.properties.append(PropertyDescription(name: "hello", type: "String?"))
         protocolDescription.properties.append(PropertyDescription(name: "other", options: .init(setVisibility: .private), type: "Int", documentation: "required property !"))
-        XCTAssertEqual("protocol Sample {\n    var hello: String? { get set }\n    // required property !\n    var other: Int { get }\n}", ProtocolWriter.default.write(description: protocolDescription))
+        XCTAssertEqual("protocol Sample {\n    var hello: String? { get set }\n    // required property !\n    var other: Int { get }\n}",
+                       ProtocolWriter.default.write(description: protocolDescription))
     }
 
     func testWriteProtocolWithAttributes() {

@@ -52,7 +52,7 @@ class ClassWriterTests: XCTestCase {
         classDescription.methods.append(MethodDescription(name: "test2", code: CodeBuilder()))
         XCTAssertEqual("class Sample {\n    var hello: String?\n\n    func test() {\n    }\n\n    func test2() {\n    }\n}", ClassWriter.default.write(description: classDescription))
     }
-    
+
     static var allTests = [
         ("testWriteEmptyClassWithDocumentation", testWriteEmptyClassWithDocumentation),
         ("testWriteEmptyStructWithDocumentation", testWriteEmptyStructWithDocumentation),
@@ -61,6 +61,6 @@ class ClassWriterTests: XCTestCase {
         ("testWriteEmptyClassWithImplementsOnly", testWriteEmptyClassWithImplementsOnly),
         ("testWriteClassWith2Propperties", testWriteClassWith2Properties),
         ("testWriteClassWithAttributes", testWriteClassWithAttributes),
-        ("testWriteClassWithPropertyAndMethods", testWriteClassWithPropertyAndMethods),
+        ("testWriteClassWithPropertyAndMethods", testWriteClassWithPropertyAndMethods)
     ]
 }

@@ -19,7 +19,13 @@ public struct PropertyDescription: ModuleDependency {
         public let isConstant: Bool
         public let isWeak: Bool
 
-        public init(getVisibility: Visibility = .default, setVisibility: Visibility? = nil, isLazy: Bool = false, isStatic: Bool = false, isOverride: Bool = false, isConstant: Bool = false, isWeak: Bool = false) {
+        public init(getVisibility: Visibility = .default,
+                    setVisibility: Visibility? = nil,
+                    isLazy: Bool = false,
+                    isStatic: Bool = false,
+                    isOverride: Bool = false,
+                    isConstant: Bool = false,
+                    isWeak: Bool = false) {
             self.getVisibility = getVisibility
             self.setVisibility = setVisibility
             self.isLazy = isLazy
@@ -49,7 +55,14 @@ public struct PropertyDescription: ModuleDependency {
     public let compute: ComputeDescription?
     public let documentation: String?
 
-    public init(name: String, options: Options = Options(), modules: [String] = [], type: String? = nil, value: CodeBuilder? = nil, attributes: [String]? = nil, compute: ComputeDescription? = nil, documentation: String? = nil) {
+    public init(name: String,
+                options: Options = Options(),
+                modules: [String] = [],
+                type: String? = nil,
+                value: CodeBuilder? = nil,
+                attributes: [String]? = nil,
+                compute: ComputeDescription? = nil,
+                documentation: String? = nil) {
         self.name = name
         self.options = options
         self.type = type

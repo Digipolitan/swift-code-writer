@@ -78,7 +78,7 @@ struct ClassWriter: CodeWriter {
         if body.count > 0 {
             parts.append(body.joined(separator: "\n\n"))
         }
-        
+
         let closeBuilder = CodeBuilder(depth: depth)
         closeBuilder.add(string: "}", indent: true, crlf: false)
         parts.append(closeBuilder.build())
@@ -86,4 +86,3 @@ struct ClassWriter: CodeWriter {
         return parts.joined(separator: "\n")
     }
 }
-
