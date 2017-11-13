@@ -1,6 +1,7 @@
 SwiftCodeWriter
 =================================
 
+[![Swift Version](https://img.shields.io/badge/swift-4.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Swift Package Manager](https://rawgit.com/jlyonsmith/artwork/master/SwiftPackageManager/swiftpackagemanager-compatible.svg)](https://swift.org/package-manager/)
 [![Twitter](https://img.shields.io/badge/twitter-@Digipolitan-blue.svg?style=flat)](http://twitter.com/Digipolitan)
 
@@ -21,7 +22,7 @@ let package = Package(
             targets: ["XXX"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/Digipolitan/swift-code-writer.git", .branch("master"))
+        .package(url: "https://github.com/Digipolitan/swift-code-writer.git", from: "1.0.0")
     ],
     targets: [
         .target(
