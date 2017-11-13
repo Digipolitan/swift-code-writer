@@ -79,4 +79,3 @@ public struct EnumDescription: ModuleDependency {
         return EnumDescription.union(modules: modules, with: dependencies)
     }
 }
-

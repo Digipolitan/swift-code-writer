@@ -60,28 +60,28 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A3C6CE441F83BA2000FC1E60 /* PBXContainerItemProxy */ = {
+		A33B2CAF1FBA3993009A94FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3C6CE451F83BA2000FC1E60 /* PBXContainerItemProxy */ = {
+		A33B2CB01FBA3993009A94FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "SwiftCodeWriter::SwiftCodeWriter";
 			remoteInfo = SwiftCodeWriter;
 		};
-		A3C6CE461F83BA2000FC1E60 /* PBXContainerItemProxy */ = {
+		A33B2CB11FBA3993009A94FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = "CodeWriter::CodeWriter";
 			remoteInfo = CodeWriter;
 		};
-		A3C6CE471F83BA2100FC1E60 /* PBXContainerItemProxy */ = {
+		A33B2CB21FBA3994009A94FA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = OBJ_1 /* Project object */;
 			proxyType = 1;
@@ -203,18 +203,18 @@
 		OBJ_43 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_44 /* CodeWriter */,
+				OBJ_44 /* CodeWriter 1.0.1 */,
 			);
 			name = Dependencies;
 			sourceTree = "<group>";
 		};
-		OBJ_44 /* CodeWriter */ = {
+		OBJ_44 /* CodeWriter 1.0.1 */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_45 /* CodeWriter */,
 				OBJ_48 /* Package.swift */,
 			);
-			name = CodeWriter;
+			name = "CodeWriter 1.0.1";
 			sourceTree = SOURCE_ROOT;
 		};
 		OBJ_45 /* CodeWriter */ = {
@@ -472,22 +472,22 @@
 		OBJ_112 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3C6CE441F83BA2000FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A33B2CAF1FBA3993009A94FA /* PBXContainerItemProxy */;
 		};
 		OBJ_124 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriterTests" /* SwiftCodeWriterTests */;
-			targetProxy = A3C6CE471F83BA2100FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A33B2CB21FBA3994009A94FA /* PBXContainerItemProxy */;
 		};
 		OBJ_82 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "SwiftCodeWriter::SwiftCodeWriter" /* SwiftCodeWriter */;
-			targetProxy = A3C6CE451F83BA2000FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A33B2CB01FBA3993009A94FA /* PBXContainerItemProxy */;
 		};
 		OBJ_84 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = "CodeWriter::CodeWriter" /* CodeWriter */;
-			targetProxy = A3C6CE461F83BA2000FC1E60 /* PBXContainerItemProxy */;
+			targetProxy = A33B2CB11FBA3993009A94FA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

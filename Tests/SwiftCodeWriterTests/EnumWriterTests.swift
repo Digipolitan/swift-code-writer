@@ -42,4 +42,3 @@ class EnumWriterTests: XCTestCase {
         ("testWriteEnumWith2Cases", testWriteEnumWith2Cases)
     ]
 }
-

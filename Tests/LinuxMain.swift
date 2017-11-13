@@ -3,5 +3,5 @@ import XCTest
 
 XCTMain([
   testCase(SwiftFileWriterTests.allTests),
-  testCase(SwiftClassWriterTests.allTests),
+  testCase(SwiftClassWriterTests.allTests)
 ])

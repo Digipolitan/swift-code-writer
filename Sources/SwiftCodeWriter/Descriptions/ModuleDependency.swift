@@ -13,7 +13,7 @@ public protocol ModuleDependency {
 }
 
 public extension ModuleDependency {
-    
+
     public static func union(modules: [String], with dependencies: [ModuleDependency]) -> [String] {
         var res = Set<String>(modules)
         dependencies.forEach { res.formUnion($0.moduleDependencies()) }
