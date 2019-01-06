@@ -1,15 +1,7 @@
 import XCTest
 
-import CodeWriterTests
+import SwiftCodeWriterTests
 
 var tests = [XCTestCaseEntry]()
-tests += ClassPropertyWriterTests.allTests()
-tests += ClassWriterTests.allTests()
-tests += EnumWriterTests.allTests()
-tests += ExtensionWriterTests.allTests()
-tests += FileWriterTests.allTests()
-tests += InitializerWriterTests.allTests()
-tests += MethodWriterTests.allTests()
-tests += ProtocolPropertyWriterTests.allTests()
-tests += ProtocolWriterTests.allTests()
+tests += SwiftCodeWriterTests.allTests()
 XCTMain(tests)
