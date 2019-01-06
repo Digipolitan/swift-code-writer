@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class ExtensionWriterTests: XCTestCase {
+final class ExtensionWriterTests: XCTestCase {
 
     func testWriteEmptyExtensionWithDocumentation() {
         let extensionDescription = ExtensionDescription(target: "String", documentation: "MyStringExtension")

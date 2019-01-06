@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class EnumWriterTests: XCTestCase {
+final class EnumWriterTests: XCTestCase {
 
     func testWriteEmptyEnumWithDocumentation() {
         let enumDescription = EnumDescription(name: "Direction", documentation: "MyDirectionEnum")

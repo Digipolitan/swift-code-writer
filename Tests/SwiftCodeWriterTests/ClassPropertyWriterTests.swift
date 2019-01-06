@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class ClassPropertyWriterTests: XCTestCase {
+final class ClassPropertyWriterTests: XCTestCase {
 
     func testPublicStaticConstProperty() {
         let propertyDescription = PropertyDescription(name: "sample", options: .init(getVisibility: .public, isStatic: true, isConstant: true), value: CodeBuilder.from(code: "\"hello\""))

@@ -1,7 +1,7 @@
 import XCTest
 @testable import SwiftCodeWriter
 
-class ProtocolWriterTests: XCTestCase {
+final class ProtocolWriterTests: XCTestCase {
 
     func testWriteEmptyProtocolWithDocumentation() {
         let protocolDescription = ProtocolDescription(name: "Sample", documentation: "MySampleProtocol")
@@ -48,6 +48,7 @@ class ProtocolWriterTests: XCTestCase {
         ("testWriteEmptyPublicProtocolWith2Implements", testWriteEmptyPublicProtocolWith2Implements),
         ("testWriteEmptyProtocolWithImplementsOnly", testWriteEmptyProtocolWithImplementsOnly),
         ("testWriteProtocolWith2Properties", testWriteProtocolWith2Properties),
-        ("testWriteProtocolWithAttributes", testWriteProtocolWithAttributes)
+        ("testWriteProtocolWithAttributes", testWriteProtocolWithAttributes),
+        ("testWriteProtocolWithPropertyAndMethods", testWriteProtocolWithPropertyAndMethods)
     ]
 }

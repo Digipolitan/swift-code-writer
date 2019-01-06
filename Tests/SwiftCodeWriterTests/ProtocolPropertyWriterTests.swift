@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class ProtocolPropertyWriterTests: XCTestCase {
+final class ProtocolPropertyWriterTests: XCTestCase {
 
     func testStaticProperty() {
         let propertyDescription = PropertyDescription(name: "sample", options: .init(isStatic: true))
