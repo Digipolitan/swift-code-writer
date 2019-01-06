@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class MethodWriterTests: XCTestCase {
+final class MethodWriterTests: XCTestCase {
 
     func testWriteEmptyMethod() {
         let methodDescription = MethodDescription(name: "sample")

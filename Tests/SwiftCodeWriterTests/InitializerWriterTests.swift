@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class InitializerWriterTests: XCTestCase {
+final class InitializerWriterTests: XCTestCase {
 
     func testWriteEmptyInit() {
         let initializerDescription = InitializerDescription()

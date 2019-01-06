@@ -2,7 +2,7 @@ import XCTest
 @testable import SwiftCodeWriter
 import CodeWriter
 
-class ClassWriterTests: XCTestCase {
+final class ClassWriterTests: XCTestCase {
 
     func testWriteEmptyClassWithDocumentation() {
         let classDescription = ClassDescription(name: "Sample", documentation: "MySampleClass")
